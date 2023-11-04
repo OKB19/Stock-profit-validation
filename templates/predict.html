@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div style="background-color: #161b23;height:43rem;display:flex;justify-content: center;align-items: center;"">
+
+    <div class="row justify-content-md-center">
+        <div class="thumbnail">
+            {% if prediction == 1 %}
+            <h1 style="color:#fff;text-align: center;color:green">You will Get Profit</h1>
+            <img style="align:center;height: 400px;border-radius:15%;" src="{{url_for('static', filename='happyman.jpg')}}"/> 
+
+            {% elif prediction == 0 %}
+            <h1 style="color:#fff;text-align: center;color:red">Don't Invest.You will Get Loss</h1>
+            <img style="height: 400px;border-radius:15%;" src="{{url_for('static', filename='sadman.jpg')}}"/>                 
+            {% endif %}
+        </div>
+    </div>
+        
+</div>
+{% endblock %}
